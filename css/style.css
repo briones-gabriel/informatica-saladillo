@@ -17,7 +17,7 @@ body {
     justify-content: space-between;
     overflow: hidden;
     height: 4em;
-    box-shadow: 0 0px 4px;
+    box-shadow: 0 0 4px;
 }
 
 /* Nav-links configuration */
