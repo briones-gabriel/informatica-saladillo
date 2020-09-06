@@ -1,0 +1,12 @@
+/* Global Settings */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+/* Body Settings */
+body {
+    font-family: "Montserrat", serif;
+}
