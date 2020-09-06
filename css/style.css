@@ -10,41 +10,111 @@ body {
     font-family: "Montserrat", serif;
 }
 
-/* Top Navigation Bar*/
+/* Top Navigation Bar */
 .top-nav {
-    position: fixed;
     display: flex;
-    overflow: hidden;
-    background-color: white;
     align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
     height: 4em;
-    width: 100%;
     box-shadow: 0 .5px 4px;
 }
 
-.top-nav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
+/* Nav-links configuration */
+.nav-links ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a {
+    display: block;
     text-decoration: none;
-    color: black;
     text-transform: uppercase;
-    font-weight: 600;
+    color: black;
     padding: 2em;
+    font-weight: 600;
 }
 
-.top-nav a:hover {
-    background-color: #70C1B3;
-    color: white;
-}
-
-.top-nav a:first-child {
+.nav-links li a:hover {
     background-color: #247BA0;
     color: white;
 }
 
-.top-nav img {
+/* Configuracion del ancho del logo */
+.logo img {
     width: 3em;
+    margin-left: 1.5em;
+}
+
+/* Menu hamburguesa */
+.toggle-button {
     margin-left: auto;
-    margin-right: .75em;
+    margin-right: 1em;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 1.4em;
+    width: 1.8em;
+}
+
+.toggle-button .bar {
+    background-color: black;
+    height: .24em;
+    width: 100%;
+    border-radius: .4em;
+}
+
+/* Container Principal */
+.principal-container {
+    background-image: url("../images/background-img.png");
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Query para telefonos */
+@media (max-width: 640px) {
+    .toggle-button {
+        display: flex;
+    }
+
+    /* Nav-links configuration*/
+    .nav-links {
+        display: none;
+        position: fixed;
+        background-color: #247BA0;
+        top: 4em;
+        right: 0;
+        width: 100%;
+        animation-delay: 5s;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li a {
+        color: white;
+    }
+
+    .nav-links li a:hover {
+        background-color: #70C1B3;
+    }
+
+    .nav-links ul {
+        display: grid;
+    }
+
+    .nav-links.active {
+        display: grid;
+        animation-delay: 5s;
+    }
+
+    /* Configuracion del ancho del logo */
+    .logo img {
+        margin-left: 1em;
+        width: 2.5em;
+    }
 }
