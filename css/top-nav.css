@@ -61,7 +61,7 @@
     /* Nav-links configuration*/
     .nav-links {
         display: none;
-        position: fixed;
+        position: absolute;
         background-color: #247BA0;
         top: 4em;
         right: 0;
