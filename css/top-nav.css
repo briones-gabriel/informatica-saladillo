@@ -84,10 +84,4 @@
     .nav-links.active {
         display: grid;
     }
-
-    /* Configuracion del ancho del logo */
-    .logo img {
-        margin-left: 1em;
-        width: 2.5em;
-    }
 }
