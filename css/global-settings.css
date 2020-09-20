@@ -10,3 +10,13 @@
 body {
     font-family: "Montserrat", serif;
 }
+
+.menu-item .menu-item-social, .menu-item .menu-item-creator {
+    display: none;
+}
+
+@media (max-width: 640px) {
+    .menu-item .menu-item-social, .menu-item .menu-item-creator {
+        display: block;
+    }
+}

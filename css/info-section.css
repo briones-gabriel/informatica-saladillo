@@ -148,7 +148,7 @@
         margin: 1.2em;
         grid-gap: 1.2em;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr .5fr .5fr;
+        grid-template-rows: 1fr .4fr .3fr;
         grid-template-areas: 'about'
                              'social-buttons'
                              'contact-info';
