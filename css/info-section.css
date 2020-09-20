@@ -1,7 +1,7 @@
 .info-section {
     display: grid;
-    margin: 2em;
-    grid-gap: 2em;
+    margin: 3em;
+    grid-gap: 3em;
     grid-template-columns: 1.6fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: 'about social-buttons'
@@ -9,6 +9,7 @@
                          'about contact-info';
 }
 
+/* About us Section */
 .about-section {
     grid-area: about;
     background-color: #70C1B3;
@@ -20,11 +21,11 @@
 
 .about-section h1 {
     font-weight: 600;
-    font-size: 2.2em;
+    font-size: 1.8em;
 }
 
 .about-section p {
-    font-size: 2em;
+    font-size: 1.6em;
 }
 
 .contact-buttons-section {
@@ -45,10 +46,10 @@
         margin: 1.2em;
         grid-gap: 1.2em;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr .5fr 1fr;
         grid-template-areas: 'about'
-                            'social-buttons'
-                            'contact-info';
+                             'social-buttons'
+                             'contact-info';
     }
     .about-section {
         grid-area: about;
@@ -62,5 +63,159 @@
 
     .about-section p {
         font-size: 1.2em;
+    }
+}
+
+/* Contact Buttons Section */
+.contact-buttons-section {
+    color: white;
+    text-align: center;
+    display: grid;
+}
+
+.contact-buttons-section h1 {
+    text-transform: uppercase;
+}
+
+.contact-buttons-section ul {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-gap: 2.4em;
+    margin: 3em;
+}
+
+.contact-buttons-section ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 3em;
+}
+
+.contact-buttons-section ul li {
+    border: 2px solid white;
+    padding: 1em;
+    width: auto;
+}
+
+.contact-buttons-section ul li:first-child {
+    border: none;
+    padding: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.4em;
+}
+
+/* Contact info section */
+.contact-info-section {
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    grid-gap: 1em;
+}
+
+.contact-info-section h1 {
+    font-size: 1.8em;
+}
+
+.contact-info-section {
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+@media (max-width: 640px) {
+    .contact-buttons-section ul li a {
+        font-weight: 600;
+        padding: 1em;
+    }
+
+    .contact-buttons-section ul {
+        grid-gap: 2em;
+    }
+
+    .contact-buttons-section ul li {
+        padding: 1em;
+    }
+}
+
+@media (max-width: 800px) {
+    .info-section {
+        display: grid;
+        margin: 1.2em;
+        grid-gap: 1.2em;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr .5fr .5fr;
+        grid-template-areas: 'about'
+                             'social-buttons'
+                             'contact-info';
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .info-section {
+        margin: 1em;
+        grid-gap: 1em;
+    }
+
+    .about-section {
+        padding: 2em;
+    }
+
+    .about-section h1 {
+        font-size: 1.6em;
+    }
+
+    .about-section p {
+        font-size: 1.4em;
+    }
+
+    .contact-buttons-section ul {
+        grid-gap: 1.6em;
+        margin: 2em auto;
+    }
+    
+    .contact-buttons-section ul li a {
+        padding: .5em .2em;
+    }
+
+    .contact-buttons-section ul li{
+        margin: auto 1em;
+    }
+
+    .contact-buttons-section ul li:first-child {
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 1380px) {
+    .about-section h1 {
+        font-size: 2em;
+    }
+
+    .about-section p {
+        font-size: 1.8em;
+    }
+
+    .contact-buttons-section ul {
+        grid-gap: 3em;
+        margin: 3em auto;
+    }
+    
+    .contact-buttons-section ul li a {
+        padding: .8em 4em;
+    }
+
+    .contact-buttons-section ul li{
+        margin: auto;
+        border: 3px solid white;
+    }
+
+    .contact-buttons-section ul li:first-child {
+        font-size: 1.4em;
     }
 }
